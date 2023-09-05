@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Translator</title>
+</head>
+<body>
+    <h1>Translator</h1>
+    <form method="POST">
+        <label for="language">Select Language:</label>
+        <select id="language" name="language">
+            {% for language in languages %}
+                <option value="{{ language }}">{{ language }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <label for="text">Input the text:</label>
+        <textarea id="text" name="text"></textarea>
+        <br><br>
+        <input type="submit" value="Translate">
+    </form>
+</body>
+</html>
